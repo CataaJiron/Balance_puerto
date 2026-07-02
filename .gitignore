@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+escenarios_balance.json
+.DS_Store
