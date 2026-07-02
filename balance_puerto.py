@@ -75,10 +75,9 @@ st.markdown("""
 AMBER, TEAL, RED, MUTED = "#d9a441", "#4ec9a8", "#e0714f", "#8a99a6"
 
 # ── Estado inicial ────────────────────────────────────────
-if "datos" not in st.session_state:
-    st.session_state.datos = dict(BASE_2025)
-    st.session_state.year = "2025"
-    st.session_state.nonce = 0
+st.session_state.setdefault("datos", dict(BASE_2025))
+st.session_state.setdefault("year", "2025")
+st.session_state.setdefault("nonce", 0)
 
 def _set_datos(nuevos, year=None):
     st.session_state.datos = dict(nuevos)
